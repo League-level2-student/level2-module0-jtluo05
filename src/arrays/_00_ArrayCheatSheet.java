@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class _00_ArrayCheatSheet {
 	static Random r=new Random();;
-static int smallestNum=1000;
+static int smallestNum=50;
+static int biggestNum=0;
 	public static void main(String[] args) {
 		//1. make an array of 5 Strings
 		
@@ -26,22 +27,29 @@ static int smallestNum=1000;
 		//6. make an array of 50 integers
 		int [] numbers = new int [50];
 		//7. use a for loop to make every value of the integer array a random number
-		for(int i=0; i> numbers.length;i++) {
-			
-			numbers[i]=r.nextInt(1000);
-		
+		for(int i=0;i<numbers.length;i++) {
+			numbers[i]=r.nextInt(51);
 		}
 		//8. without printing the entire array, print only the smallest number in the array
-		for(int number:numbers) {
-			if (number<smallestNum) {
+	
+	for(int number:numbers) {
+	if(smallestNum>number) {
 		smallestNum=number;
-				
-		}
-		}
-		 System.out.println("smallest Number ="+smallestNum);
-		}
+	}
+	
+	}
+		System.out.println(smallestNum);
+		
 		//9 print the entire array to see if step 8 was correct
 		
 		//10. print the largest number in the array.
+		for(int number:numbers) {
+			if(biggestNum<number) {
+				biggestNum=number;
+			}
+			
+			}
+				System.out.println(biggestNum);
 	}
+}
 
